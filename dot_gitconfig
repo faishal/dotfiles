@@ -1,0 +1,13 @@
+[user]
+	name = Faishal Saiyed
+	email = saiyedfaishal@gmail.com
+	signingkey = 62E469AA0DF486C5
+[commit]
+	gpgsign = true
+[init]
+	templateDir = ~/.git-template
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
