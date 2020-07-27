@@ -1,7 +1,7 @@
 [user]
 	name = Faishal Saiyed
 	email = saiyedfaishal@gmail.com
-	signingkey = 62E469AA0DF486C5
+	signingkey = 21185FE99966619D
 [commit]
 	gpgsign = true
 [init]
