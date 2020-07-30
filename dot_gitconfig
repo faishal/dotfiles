@@ -1,7 +1,7 @@
 [user]
 	name = Faishal Saiyed
 	email = saiyedfaishal@gmail.com
-	signingkey = 21185FE99966619D
+	signingkey = 62E469AA0DF486C5
 [commit]
 	gpgsign = true
 [init]
@@ -11,3 +11,5 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[core]
+	filemode = false

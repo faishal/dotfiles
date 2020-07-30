@@ -1,0 +1,22 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+if [ $EUID != 0 ]; then
+    sudo "$0" "$@"
+    exit $?
+fi
+sudo mkdir -p /work
+sudo mkdir -p /extra
+sudo mkdir -p /backup
+
+
+MOUNT_WORK='UUID=8A082A20082A0C2F /work    auto nosuid,nodev,nofail,x-gvfs-show 0 0'
+MOUNT_EXTRA='UUID=EC50393A50390D38 /extra    auto nosuid,nodev,nofail,x-gvfs-show 0 0'
+MOUNT_BACKUP='UUID=7448436F48432F64 /backup    auto nosuid,nodev,nofail,x-gvfs-show 0 0'
+FILE='/etc/fstab'
+
+sudo grep -qF -- "$MOUNT_WORK" "$FILE" || sudo echo "$MOUNT_WORK" >> "$FILE"
+sudo grep -qF -- "$MOUNT_EXTRA" "$FILE" || sudo echo "$MOUNT_EXTRA" >> "$FILE"
+sudo grep -qF -- "$MOUNT_BACKUP" "$FILE" || sudo echo "$MOUNT_BACKUP" >> "$FILE"
+
+sudo mount -a
+{{ end -}}

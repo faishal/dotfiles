@@ -1,6 +1,8 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
-
+echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
+curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+sudo apt-get update
 sudo apt install -y \
 	curl \
 	direnv \
@@ -10,6 +12,12 @@ sudo apt install -y \
 	vim \
 	vim-gtk \
 	units \
+	plexmediaserver\
+	openssh-server\
+	parcellite\
+	autojump\
 	zsh
 sudo snap install go --classic
+sudo snap install -y spotify
+sudo ln -s /var/lib/snapd/desktop/applications/ /usr/share/applications/snap 
 {{ end -}}
