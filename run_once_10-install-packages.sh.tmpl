@@ -2,6 +2,11 @@
 #!/bin/sh
 echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
 curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+
+# Launcher
+sudo add-apt-repository -r ppa:agornostal/ulauncher
+sudo add-apt-repository ppa:agornostal/ulauncher
+
 sudo apt-get update
 sudo apt install -y \
 	curl \
@@ -16,8 +21,10 @@ sudo apt install -y \
 	openssh-server\
 	parcellite\
 	autojump\
+	ulauncher\
 	zsh
 sudo snap install go --classic
-sudo snap install -y spotify
-sudo ln -s /var/lib/snapd/desktop/applications/ /usr/share/applications/snap 
+sudo snap install spotify
+sudo ln -sfn /var/lib/snapd/desktop/applications/ /usr/share/applications/snap 
+
 {{ end -}}
