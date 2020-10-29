@@ -45,19 +45,19 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 # Install GNU & additional CLI utilities
 brew install moreutils
 brew install findutils
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 
 # Install system & networking tools
-brew install wget --with-iri
+brew install wget
 brew install grep
 brew install openssh
 brew install p7zip
-brew isntall sslscan
+brew install sslscan
 brew install telnet
 brew install nmap
 # Compilers & Image manipulation
 brew install gcc
-brew install imagemagick --with-webp
+brew install imagemagick
 
 # Git & friends
 brew install git
@@ -105,7 +105,7 @@ brew install xpdf
 brew install xz
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install screen
@@ -121,7 +121,7 @@ brew install woff2
 # Install other useful binaries.
 brew install ack
 brew install gs
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip
