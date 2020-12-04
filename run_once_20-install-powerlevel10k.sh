@@ -14,4 +14,4 @@ curl -s -L https://github.com/romkatv/powerlevel10k/archive/${version}.tar.gz | 
 [[ ! -f $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]] || git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 [[ ! -f $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]] || git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-compaudit | xargs chmod g-w,o-w
+# compaudit | xargs chmod g-w,o-w

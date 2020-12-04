@@ -11,7 +11,7 @@ fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   cd $HOME;
-  sudo add-apt-repository -y ppa:martin-frost/thoughtbot-rcm
+  # sudo add-apt-repository -y ppa:martin-frost/thoughtbot-rcm
   sudo apt-get update
   mkdir -p $HOME/.ssh
   sudo apt-get install -y rcm git curl vim ruby-full build-essential
