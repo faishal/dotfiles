@@ -138,43 +138,43 @@ brew install zopfli
 if [[ "$OSTYPE" == "darwin"* ]]; then
   echo "Attempting to install GUI apps"
   ## Productivity
-  brew cask install the-unarchiver
-  brew cask install iterm2
-  brew cask install gimp
-  brew cask install numi
-  brew cask install pencil
-  brew cask install macpass
+  brew install the-unarchiver
+  brew install iterm2
+  brew install gimp
+  brew install numi
+  brew install pencil
+  brew install macpass
 
   ## Web Browsers
-  brew cask install google-chrome
-  brew cask install chromedriver
-  brew cask install firefox
-  brew cask install opera
+  brew install google-chrome
+  brew install chromedriver
+  brew install firefox
+  brew install opera
 
   ## Cloud Storage Providers
-  brew cask install google-backup-and-sync
-  brew cask install dropbox
+  brew install google-backup-and-sync
+  brew install dropbox
 
   ## Text Editors
-  brew cask install visual-studio-code
-  brew cask install atom
-  brew cask install sublime-text
+  brew install visual-studio-code
+  brew install atom
+  brew install sublime-text
 
   ## Multimedia
-  brew cask install vlc
-  brew cask install spotify
+  brew install vlc
+  brew install spotify
 
   ## Work Tools
-  brew cask install zoomus
-  brew cask install slack
+  brew install zoomus
+  brew install slack
 
   # Fonts
   brew tap homebrew/cask-fonts
-  brew cask install font-fira-code
-  brew cask install font-cascadia
-  brew cask install font-source-code-pro
-  brew cask install font-source-sans-pro
-  brew cask install font-source-serif-pro
+  brew install font-fira-code
+  brew install font-cascadia
+  brew install font-source-code-pro
+  brew install font-source-sans-pro
+  brew install font-source-serif-pro
 fi
 
 # Development Kit tools
